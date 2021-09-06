@@ -11,8 +11,8 @@ script:
 after_success:
    - docker build -t melanieammonite/multi-client ./client
    - docker build -t melanieammonite/multi-nginx ./nginx
-   - docker built -t melanieammonite/multi-server ./server
-   - docker built -t melanieammonite/multi-worker ./worker
+   - docker build -t melanieammonite/multi-server ./server
+   - docker build -t melanieammonite/multi-worker ./worker
    # Log in to docker CLI
    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
    # Take those images and push them to docker hub
